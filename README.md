@@ -1,2 +1,5 @@
 # CatalogoAPI_CleanArchitecture
-Exemplo de Clean Architecture baseado no projeto CatalogoAPI
+
+Este é um projeto de estudo sobre Clean Architecture, baseado na API [CatalogoAPI](https://github.com/daniellfranco/CatalogoAPI) que é um projeto de estudo sobre APIs em DotNet.
+
+
