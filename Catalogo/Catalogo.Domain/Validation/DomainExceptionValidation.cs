@@ -1,5 +1,7 @@
 ﻿namespace Catalogo.Domain.Validation
 {
+
+    // Validador simples, herda de exception
     public class DomainExceptionValidation : Exception
     {
         public DomainExceptionValidation(string error) : base(error)

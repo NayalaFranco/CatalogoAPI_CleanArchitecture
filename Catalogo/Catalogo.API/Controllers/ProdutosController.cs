@@ -8,8 +8,8 @@ namespace Catalogo.API.Controllers
     [ApiController]
     public class ProdutosController : Controller
     {
+        // Injeta uma instancia do serviço que foi criada na camada Application.
         private readonly IProdutoService _produtoService;
-
         public ProdutosController(IProdutoService produtoService)
         {
             _produtoService = produtoService;

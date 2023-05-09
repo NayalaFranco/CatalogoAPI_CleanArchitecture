@@ -9,6 +9,7 @@ namespace Catalogo.API.Controllers
     [ApiController]
     public class CategoriasController : ControllerBase
     {
+        // Injeta uma instancia do serviço que foi criada na camada Application.
         private readonly ICategoriaService _categoriaService;
         public CategoriasController(ICategoriaService categoriaService)
         {

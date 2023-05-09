@@ -2,6 +2,9 @@
 
 namespace Catalogo.Application.Interfaces
 {
+    // Contrato para realizar as operações com categorias.
+    // Expõe somente as informações do DTO e não do dominio.
+    // A implementação dessas interfaces foi feita na pasta Services.
     public interface ICategoriaService
     {
         Task<IEnumerable<CategoriaDTO>> GetCategorias();

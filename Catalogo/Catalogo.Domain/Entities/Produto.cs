@@ -2,14 +2,17 @@
 
 namespace Catalogo.Domain.Entities
 {
+    // Classe sealed não pode ser herdada, objetivo encapsular e isolar.
     public sealed class Produto : Entity
     {
+        // Construtor com validação
         public Produto(string nome, string descricao, decimal preco, string imagemUrl,
             int estoque, DateTime dataCadastro)
         {
             ValidateDomain(nome, descricao, preco, imagemUrl, estoque, dataCadastro);
         }
 
+        // Set privado só permite que os dados sejam inseridos por métodos contidos nessa classe.
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
         public decimal Preco { get; private set; }
@@ -24,9 +27,15 @@ namespace Catalogo.Domain.Entities
             CategoriaId = categoriaId;
         }
 
+
+        // Aqui estamos fazendo uma validação simples
+        // essa validação poderia ser feito na camada application
+        // mas devido a simplicidade do projeto é oque tinha para
+        // demonstrar como fazer validação em domain.
         private void ValidateDomain(string nome, string descricao, decimal preco, string imagemUrl,
             int estoque, DateTime dataCadastro)
         {
+            // Esse DomainExceptionValidation foi criado na pasta Validation
             DomainExceptionValidation.When(string.IsNullOrEmpty(nome),
                 "Nome inválido. O nome é obrigatório");
 

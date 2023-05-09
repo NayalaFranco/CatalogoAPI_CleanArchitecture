@@ -2,6 +2,7 @@
 
 namespace Catalogo.Application.DTOs
 {
+    // Data Annotations só devem ser usadas nos DTOs
     public class CategoriaDTO
     {
         public int Id { get; set; }

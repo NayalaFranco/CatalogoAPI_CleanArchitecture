@@ -6,9 +6,12 @@ using Catalogo.Domain.Interfaces;
 
 namespace Catalogo.Application.Services
 {
+    // Implementa as interfaces.
     public class CategoriaService : ICategoriaService
     {
+        // Injeta uma instância do repositório que fica lá no Domain
         private ICategoriaRepository _categoryRepository;
+        // Injeta instância do automapper
         private readonly IMapper _mapper;
         public CategoriaService(ICategoriaRepository categoryRepository,
             IMapper mapper)

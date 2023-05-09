@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Catalogo.Infrastructure.Repositories
 {
+    // Implementação das interfaces que estão no Projeto Domain
     public class ProdutoRepository : IProdutoRepository
     {
         private ApplicationDbContext _productContext;

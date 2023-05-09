@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Catalogo.Application.DTOs
 {
+    // Data Annotations só devem ser usadas nos DTOs
+    // DTOs isolam o dominio expondo somente os DTOs e não
+    // as entidades de dominio.
     public class ProdutoDTO
     {
         public int Id { get; set; }

@@ -8,6 +8,7 @@ namespace Catalogo.Infrastructure.EntitiesConfiguration
     {
         public void Configure(EntityTypeBuilder<Produto> builder)
         {
+            // Usa fluenteAPI para configurar as propriedades
             builder.HasKey(t => t.Id);
             builder.Property(p => p.Nome).HasMaxLength(100).IsRequired();
             builder.Property(p => p.Descricao).HasMaxLength(200).IsRequired();
@@ -17,7 +18,7 @@ namespace Catalogo.Infrastructure.EntitiesConfiguration
             builder.Property(p => p.Estoque).HasDefaultValue(1).IsRequired();
             builder.Property(p => p.DataCadastro).IsRequired();
 
-
+            // Define relacionamento entre produto e categoria
             builder.HasOne(e => e.Categoria).WithMany(e => e.Produtos)
                 .HasForeignKey(e => e.CategoriaId);
         }
